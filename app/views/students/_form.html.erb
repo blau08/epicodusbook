@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @student %>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :quote %>
+  <%= f.text_field :quote %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <%= f.submit  %>
+<% end %>

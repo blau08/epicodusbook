@@ -1,0 +1,14 @@
+<% content_for(:title, "EpicodusBook | Student") %>
+
+<h1><%= @student.name%></h1>
+<h1><%= @student.quote%></h1>
+<h1><%= @student.url%></h1>
+
+<p><%= link_to "Edit", edit_student_path(@student) %></p>
+<p><%= link_to "Delete", student_path(@student),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p>
+  <%= link_to "Return to students", students_path %>
+</p>
