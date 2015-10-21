@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'tzinfo-data'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
+gem 'devise'
 
 group :development do
   gem 'byebug'
@@ -25,4 +26,8 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
