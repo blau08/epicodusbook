@@ -3,6 +3,8 @@
 <h1><%= @student.name%></h1>
 <h1><%= @student.quote%></h1>
 <h1><%= @student.url%></h1>
+<%= image_tag @student.image.url(:large) %>
+
 
 <% if current_user %>
   <p><%= link_to "Edit", edit_student_path(@student) %></p>

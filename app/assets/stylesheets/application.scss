@@ -16,6 +16,19 @@
 
   border-radius: 6px;
 }
+#filefield {
+color: #fff;
+height: 45px;
+margin-left: 43%;
+margin-right: 40%;
+
+border-radius: 3px;
+
+padding: 5px 8px;
+outline: none;
+-webkit-user-select: none;
+cursor: pointer;
+}
 .img-thumbnail {
   display: inline-block;
   max-width: 100%;

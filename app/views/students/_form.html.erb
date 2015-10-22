@@ -1,11 +1,20 @@
 <%= render "layouts/errors", :object => @student %>
 
-<%= form_for @student do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :quote %>
-  <%= f.text_field :quote %>
-  <%= f.label :url %>
-  <%= f.text_field :url %>
-  <%= f.submit  %>
-<% end %>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <%= form_for @student do |f| %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+      <br>
+      <%= f.text_field :quote, class: 'form-control', placeholder: 'Enter Your Quote' %>
+      <br>
+      <%= f.label :image,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= f.file_field :image %>
+      </div>
+      <%= f.submit 'Create Student', class: 'btn btn-default'%>
+    <% end %>
+    </div>
+  </div>
+</div>
