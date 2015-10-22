@@ -4,8 +4,10 @@
 <h1><%= @student.quote%></h1>
 <h1><%= @student.url%></h1>
 
-<p><%= link_to "Edit", edit_student_path(@student) %></p>
-<p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
+<% if current_user %>
+  <p><%= link_to "Edit", edit_student_path(@student) %></p>
+  <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
+<% end %>
 
 
 
