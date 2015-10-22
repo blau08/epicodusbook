@@ -1,13 +1,18 @@
 <% content_for(:title, "EpicodusBook | Student") %>
 
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
 <h1><%= @student.name%></h1>
 <h1><%= @student.quote%></h1>
 <%= image_tag @student.image.url(:large) %>
 
 
 <% if current_user %>
-  <p><%= link_to "Edit", edit_student_path(@student) %></p>
-  <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
+  <!-- <p><%= link_to "Edit", edit_student_path(@student) %></p>
+  <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p> -->
 <% end %>
 
 
@@ -15,3 +20,6 @@
 <p>
   <%= link_to "Return to students", students_path %>
 </p>
+</div>
+</div>
+</div>
