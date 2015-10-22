@@ -31,7 +31,7 @@
     <% @students.each do |student| %>
     <div class="col-md-3 col-sm-6 hero-feature">
       <div class="thumbnail">
-        <img src="<%= student.url %>" alt="">
+        <%= image_tag student.image.url(:large) %>
         <div class="caption">
           <%= link_to student.name, student_path(student) %>
           <p><%= student.quote %></p>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-        <% end %>
+        <% end %>herok
   </div>
 
   <hr>

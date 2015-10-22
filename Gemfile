@@ -10,6 +10,8 @@ gem 'tzinfo-data'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 gem 'devise'
+gem 'paperclip', '~> 4.1'
+gem 'aws-sdk'
 
 group :development do
   gem 'byebug'
