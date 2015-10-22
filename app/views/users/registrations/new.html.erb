@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container text-center">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 
@@ -8,25 +8,23 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
+      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Enter Your Email' %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
 
+      <% end %>
+      <br />
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Enter Your Password (8 characters minimum)' %>
+    </div>
+    <br>
     <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
     </div>
-
+    <br>
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", class: 'btn btn-default' %>
     </div>
     <% end %>
 
