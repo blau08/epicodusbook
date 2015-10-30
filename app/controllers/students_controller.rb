@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @student.comments = Comment.all
   end
 
   def new
