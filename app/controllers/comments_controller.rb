@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   def new
-    @comment = Comment.new
+    @student = Student.find(params[:student_id])
+    @comment = @student.comments.new
   end
 end
