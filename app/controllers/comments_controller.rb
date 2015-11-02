@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     @student = Student.find(params[:student_id])
     @comment = Comment.new(comment_params)
     # @comment.user = current_user
+    @comment.student = @student
     @comment.save
     redirect_to student_path(@student)
   end
