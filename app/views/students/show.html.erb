@@ -4,29 +4,29 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
 
-<h1><%= @student.name%></h1>
-<h1><%= @student.quote%></h1>
-<%= image_tag @student.image.url(:medium) %>
+      <h1><%= @student.name%></h1>
+      <h1><%= @student.quote%></h1>
+      <%= image_tag @student.image.url(:medium) %>
 
-<% if current_user %>
-  <!-- <p><%= link_to "Edit", edit_student_path(@student) %></p>
-  <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p> -->
-<% end %>
+      <% if current_user %>
+      <!-- <p><%= link_to "Edit", edit_student_path(@student) %></p>
+      <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p> -->
+      <% end %>
 
-<p>
-  <%= link_to "Return to students", students_path %>
-</p>
-<p>
-  <%= link_to "New Comment", new_student_comment_path(@student), id: "enter-comment-link", remote: true, class: "btn btn-primary" %>
-</p>
+      <p>
+        <%= link_to "Return to students", students_path %>
+      </p>
+      <p>
+        <%= link_to "New Comment", new_student_comment_path(@student), id: "enter-comment-link", remote: true, class: "btn btn-primary" %>
+      </p>
 
-<% @student.comments.each do |comment| %>
-  <li><%= comment.comment %></li>
-<% end %>
+      <% @student.comments.each do |comment| %>
+      <li><%= comment.comment %></li>
+      <% end %>
 
-<div id="show-comments">
-  <%= render '/comments/comments' %>
-</div>
+      <div id="show-comments">
+        <%= render '/comments/comments' %>
+      </div>
 
     </div>
   </div>
