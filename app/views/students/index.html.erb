@@ -6,6 +6,8 @@
       <% if current_user %>
       <%= link_to "New Student", new_student_path, class: "btn btn-primary" %>
       <% end %>
+      <%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
+
     </header>
   </div>
   <h1>Students 2015</h1>
@@ -46,13 +48,13 @@
 
   <h1>Categories</h1>
   <div class="row text-center">
-    <% @students.each do |student| %>
+    <% @categories.each do |category| %>
     <div class="col-md-3 col-sm-6 hero-feature">
       <div class="thumbnail">
-        <%= image_tag student.image.url(:large) %>
+
         <div class="caption">
-          <%= link_to student.name, student_path(student) %>
-          <p><%= student.quote %></p>
+          <%= link_to category.name, category_path(category) %>
+          <p><%= category.quote %></p>
         </div>
       </div>
     </div>

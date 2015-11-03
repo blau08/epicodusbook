@@ -4,6 +4,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+    @categories = Category.all
   end
 
   def show
