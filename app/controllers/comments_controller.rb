@@ -14,7 +14,10 @@ class CommentsController < ApplicationController
     # @comment.user = current_user
     @comment.student = @student
     @comment.save
-    redirect_to student_path(@student)
+    respond_to do |format|
+      format.html {redirect_to student_path(@student)}
+      format.js
+    end
   end
 
 private

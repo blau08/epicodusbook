@@ -1,8 +1,10 @@
+<div id="enter-comment-form">
+  <%= form_for [@student, @comment], remote: true do |f| %>
+    <%= f.text_field :comment, class: 'form-control', placeholder: 'Enter A Message' %>
+    <br>
+    <%= f.submit 'Add Comment', class: 'btn btn-default'%>
+  <% end %>
+</div>
 
-
-
-    <%= form_for [@student, @comment] do |f| %>
-      <%= f.text_field :comment, class: 'form-control', placeholder: 'Enter A Message' %>
-      <br>
-      <%= f.submit 'Add Comment', class: 'btn btn-default'%>
-    <% end %>
+<br>
+<button onclick='hideNewForm()' id="comment-cancel-button" class= "btn btn-default" >Cancel</button>
