@@ -6,11 +6,15 @@
 
       <h1><%= @student.name%></h1>
       <h1><%= @student.quote%></h1>
+      <h1><%= @student.facebook%></h1>
+      <h1><%= @student.linkedin%></h1>
+      <h1><%= @student.github%></h1>
+      <h1><%= @student.other%></h1>
       <%= image_tag @student.image.url(:medium) %>
 
       <% if current_user %>
-      <!-- <p><%= link_to "Edit", edit_student_path(@student) %></p>
-      <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p> -->
+      <p><%= link_to "Edit", edit_student_path(@student) %></p>
+      <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
       <% end %>
 
       <p>

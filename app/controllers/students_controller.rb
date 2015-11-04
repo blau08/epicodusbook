@@ -63,6 +63,6 @@ class StudentsController < ApplicationController
 
 private
   def student_params
-    params.require(:student).permit(:name, :quote, :image)
+    params.require(:student).permit(:name, :quote, :facebook, :linkedin, :github, :other, :image)
   end
 end
