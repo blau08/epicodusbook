@@ -3,9 +3,9 @@
     <header class="jumbotron hero-spacer text-center">
       <h1>EpicodusBook</h1>
       <p>A look back at our journey together.</p>
-      <% if current_user %>
+      <!-- <% if current_user %>
       <%= link_to "New Student", new_student_path, class: "btn btn-primary" %>
-      <% end %>
+      <% end %> -->
       <%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
 
     </header>
@@ -30,13 +30,13 @@
 
   <h1>Moments</h1>
   <div class="row text-center">
-    <% @students.each do |student| %>
+    <% @profiles.each do |profile| %>
     <div class="col-md-3 col-sm-6 hero-feature">
       <div class="thumbnail">
-        <%= image_tag student.image.url(:large) %>
+        <%= image_tag profile.image.url(:large) %>
         <div class="caption">
-          <%= link_to student.name, student_path(student) %>
-          <p><%= student.quote %></p>
+          <%= link_to profile.name, user_profile_path(profile.user, profile) %>
+          <p><%= profile.quote %></p>
         </div>
       </div>
     </div>

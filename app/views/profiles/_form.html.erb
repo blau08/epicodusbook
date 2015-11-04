@@ -1,0 +1,20 @@
+<%= render "layouts/errors", :object => @profile %>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <%= form_for [@user,@profile] do |f| %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+      <br>
+      <%= f.text_field :quote, class: 'form-control', placeholder: 'Enter Your Quote' %>
+      <br>
+      <%= f.label :image,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= f.file_field :image %>
+      </div>
+      <%= f.submit class: 'btn btn-default'%>
+    <% end %>
+    </div>
+  </div>
+</div>
