@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   end
 
   resources :categories
+
+  resources :users do
+    resources :profiles
+  end
 end
