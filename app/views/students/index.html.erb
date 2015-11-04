@@ -22,8 +22,7 @@
         </div>
       </div>
     </div>
-
-        <% end %>
+    <% end %>
   </div>
 
   <hr>
@@ -46,20 +45,6 @@
 
   <hr>
 
-  <h1>Categories</h1>
-  <div class="row text-center">
-    <% @categories.each do |category| %>
-    <div class="col-md-3 col-sm-6 hero-feature">
-      <div class="thumbnail">
 
-        <div class="caption">
-          <%= link_to category.name, category_path(category) %>
-          <p><%= category.quote %></p>
-        </div>
-      </div>
-    </div>
 
-        <% end %>
-  </div>
-  <hr>
 </div>

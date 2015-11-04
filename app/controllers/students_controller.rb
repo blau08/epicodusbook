@@ -55,6 +55,12 @@ class StudentsController < ApplicationController
     redirect_to students_path
   end
 
+  def upvote
+    @student = Student.find(params[:id])
+    @student.upvote_by current_user
+    redirect_to categories_path
+  end
+
 private
   def student_params
     params.require(:student).permit(:name, :quote, :image)

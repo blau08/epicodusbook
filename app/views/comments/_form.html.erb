@@ -1,5 +1,5 @@
 <div id="enter-comment-form">
-  <%= form_for [@student, @comment], remote: true do |f| %>
+  <%= form_for [@from, @comment], remote: true do |f| %>
     <%= f.text_field :comment, class: 'form-control', placeholder: 'Enter A Message' %>
     <br>
     <%= f.submit 'Add Comment', class: 'btn btn-default'%>

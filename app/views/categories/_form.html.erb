@@ -8,8 +8,12 @@
       <br>
       <%= f.text_field :quote, class: 'form-control', placeholder: 'Enter Your Quote' %>
       <br>
-
-      <%= f.submit 'Create Student', class: 'btn btn-default'%>
+      <%= f.label :image,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= f.file_field :image %>
+      </div>
+      <%= f.submit 'Create Category', class: 'btn btn-default'%>
     <% end %>
     </div>
   </div>

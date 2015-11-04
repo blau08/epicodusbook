@@ -12,6 +12,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'devise'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '< 2.0'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development do
   gem 'byebug'

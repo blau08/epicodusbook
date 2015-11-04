@@ -22,7 +22,7 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = Profile.find(params[:id])
-    
+
     if @profile.update(profile_params)
       redirect_to user_profile_path(current_user, @profile)
     else
@@ -32,6 +32,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @comments = @profile.comments
   end
 
 

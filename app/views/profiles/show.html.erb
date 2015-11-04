@@ -12,9 +12,12 @@
         <%= link_to "Return to students", students_path %>
       </p>
       <p>
-        <%= link_to "New Comment", new_student_comment_path(@profile), id: "enter-comment-link", remote: true, class: "btn btn-primary" %>
+        <%= link_to "New Comment", new_profile_comment_path(@profile), id: "enter-comment-link", remote: true, class: "btn btn-primary" %>
       </p>
 
+      <div id="show-comments">
+        <%= render '/comments/comments' %>
+      </div>
 
 
 

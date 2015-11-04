@@ -5,9 +5,24 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :categories
+  resources :categories do
+    member do
+      put "like", to: "categories#upvote"
+    end
+  end
 
   resources :users do
     resources :profiles
   end
+
+  resources :profiles do
+    resources :comments
+  end
+
+  resources :students do
+    member do
+      put "like", to: "students#upvote"
+    end
+  end
+
 end
