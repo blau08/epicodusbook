@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :controllers
   devise_for :users
   root 'students#index'
   resources :students do
@@ -25,5 +24,7 @@ Rails.application.routes.draw do
       put "like", to: "students#upvote"
     end
   end
+
+  resources :blogs
 
 end
