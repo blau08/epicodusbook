@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Blog:</strong>
+  <%= @controller.blog %>
+</p>
+
+<p>
+  <strong>New:</strong>
+  <%= @controller.new %>
+</p>
+
+<p>
+  <strong>Create:</strong>
+  <%= @controller.create %>
+</p>
+
+<p>
+  <strong>Update:</strong>
+  <%= @controller.update %>
+</p>
+
+<p>
+  <strong>Destroy:</strong>
+  <%= @controller.destroy %>
+</p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @controller.index %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @controller.show %>
+</p>
+
+<p>
+  <strong>Edit:</strong>
+  <%= @controller.edit %>
+</p>
+
+<%= link_to 'Edit', edit_controller_path(@controller) %> |
+<%= link_to 'Back', controllers_path %>
