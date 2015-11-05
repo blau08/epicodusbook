@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
   has_one :profile
 
-  # after_create :subscribe_user_to_mailing_list
+  after_create :subscribe_user_to_mailing_list
 
   private
 

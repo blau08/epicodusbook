@@ -5,5 +5,21 @@
       <p>A collection of user stories</p>
       <%= link_to "New Blog", new_blog_path, class: "btn btn-primary" %>
     </header>
+
+    <h1>Blogs 2015</h1>
+    <div class="row text-center">
+      <% @blogs.each do |blog| %>
+      <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="thumbnail">
+
+          <div class="caption">
+            <%= link_to blog.title, blog_path(blog) %>
+            <p><%= blog.name %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
   </div>
 </div>
