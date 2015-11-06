@@ -11,7 +11,7 @@
       <% @blogs.each do |blog| %>
       <div class="col-md-3 col-sm-6 hero-feature">
         <div class="thumbnail">
-
+          <%= image_tag blog.image.url(:large) %>
           <div class="caption">
             <%= link_to blog.title, blog_path(blog) %>
             <p><%= blog.name %></p>

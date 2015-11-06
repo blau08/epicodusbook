@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root 'students#index'
   resources :students do
@@ -26,5 +27,7 @@ Rails.application.routes.draw do
   end
 
   resources :blogs
+
+  resources :projects
 
 end

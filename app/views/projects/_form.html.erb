@@ -1,19 +1,17 @@
 <div class="container text-center">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for @blog do |f| %>
+      <%= form_for @project do |f| %>
       <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
       <br>
-      <%= f.text_field :title, class: 'form-control', placeholder: 'Enter Title' %>
-      <br>
-      <%= f.text_field :blog, class: 'form-control', placeholder: 'Enter Content' %>
+      <%= f.text_field :link, class: 'form-control', placeholder: 'Enter URL with https://' %>
       <br>
       <%= f.label :image,'Upload An Image'%>
       <br>
       <div id="filefield">
         <%= f.file_field :image %>
       </div>
-      <%= f.submit class: 'btn btn-default'%>
+      <%= f.submit 'Create Project', class: 'btn btn-default'%>
       <% end %>
     </div>
   </div>

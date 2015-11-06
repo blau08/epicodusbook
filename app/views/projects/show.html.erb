@@ -1,0 +1,22 @@
+<% content_for(:title, "EpicodusBook | Student") %>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h1><%= @project.name%></h1>
+      <h1><%= @project.link%></h1>
+      <%= image_tag @project.image.url(:medium) %>
+
+
+      <p><%= link_to "Edit", edit_project_path(@project) %></p>
+
+
+      <p>
+        <%= link_to "Return to projects", projects_path %>
+      </p>
+
+
+    </div>
+  </div>
+</div>

@@ -1,2 +1,31 @@
-<h1>Blog#show</h1>
-<p>Find me in app/views/blog/show.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h1><%= @blog.title%></h1>
+      <br>
+
+      <%= image_tag @blog.image.url(:medium) %>
+      <br>
+      <br>
+      by <%= @blog.name%>
+      <br>
+      <%= @blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%Y-%m-%d %H:%M %P"  %>
+      <hr>
+      <%= @blog.blog%>
+
+      <!-- <% if current_user %>
+      <p><%= link_to "Edit", edit_student_path(@blog) %></p>
+      <p><%= link_to "Delete", student_path(@blog), :method => 'delete' %></p>
+      <% end %> -->
+      <br>
+      <br>
+      <p>
+        <%= link_to "Return to students", students_path %>
+      </p>
+
+
+
+    </div>
+  </div>
+</div>

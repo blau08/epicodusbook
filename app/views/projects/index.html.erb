@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <header class="jumbotron hero-spacer text-center">
+      <h1>Projects</h1>
+      <p>A showcase of every students apps</p>
+      <%= link_to "New Project", new_project_path, class: "btn btn-primary" %>
+    </header>
+
+    <hr>
+
+    <h1>Projects 2015</h1>
+    <div class="row text-center">
+      <% @projects.each do |project| %>
+      <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="thumbnail">
+          <%= image_tag project.image.url(:large) %>
+          <div class="caption">
+            <%= link_to project.name, project_path(project) %>
+            <br>
+            <br>
+            <a href="<%= project.link %>"><%= project.link %></a>
+
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
