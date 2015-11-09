@@ -13,12 +13,14 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new({:name => params['name'], :quote => params['quote'], :image => params['image']})
     if @category.save
-      redirect_to categories_path
-    else
-      render :new
     end
-
-    @dress
+    @dress = Dress.new({:name => params['name'], :quote => params['quote'], :image => params['image']})
+    if @dress.save
+    end
+    @friend = Friend.new({:name => params['name'], :quote => params['quote'], :image => params['image']})
+    if @friend.save
+    end
+      redirect_to categories_path
   end
 
   def show
