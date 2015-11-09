@@ -14,10 +14,10 @@ class CategoriesController < ApplicationController
     @category = Category.new({:name => params['name'], :quote => params['quote'], :image => params['image']})
     if @category.save
     end
-    @dress = Dress.new({:name => params['name'], :quote => params['quote'], :image => params['image2']})
+    @dress = Dress.new({:name => params['name2'], :quote => params['quote2'], :image => params['image2']})
     if @dress.save
     end
-    @friend = Friend.new({:name => params['name'], :quote => params['quote'], :image => params['image3']})
+    @friend = Friend.new({:name => params['name3'], :quote => params['quote3'], :image => params['image3']})
     if @friend.save
     end
       redirect_to categories_path
