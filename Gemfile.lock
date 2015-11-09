@@ -39,7 +39,7 @@ GEM
     acts_as_votable (0.10.0)
     addressable (2.3.8)
     arel (6.0.3)
-    autoprefixer-rails (6.0.3)
+    autoprefixer-rails (6.1.0.1)
       execjs
       json
     aws-sdk (1.66.0)
@@ -54,7 +54,7 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
     builder (3.2.2)
-    byebug (8.0.0)
+    byebug (8.0.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
