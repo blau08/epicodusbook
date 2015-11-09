@@ -4,4 +4,11 @@ class Category < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   has_many :comments
+
+  def upcount
+    if self.count == nil
+      self.count = 0
+    end
+    self.count += 1
+  end
 end

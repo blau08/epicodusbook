@@ -1,20 +1,47 @@
 
 
 <div class="container text-center">
+
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-    <%= form_for @category do |f| %>
-      <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
+    <%= form_tag("/categories", class: 'form-inline', method: "post", multipart: true) do %>
+    <h3>Funny</h3>
+      <%= text_field_tag :name, "", class: 'form-control', placeholder: "Enter Name" %>
       <br>
-      <%= f.text_field :quote, class: 'form-control', placeholder: 'Enter Your Quote' %>
       <br>
-      <%= f.label :image,'Upload An Image'%>
+      <%= text_field_tag :quote, "", class: 'form-control', placeholder: "Enter Name" %>
+      <br>
+      <br>
+      <%= label_tag :image,'Upload An Image'%>
       <br>
       <div id="filefield">
-        <%= f.file_field :image %>
+        <%= file_field_tag :image %>
       </div>
-      <%= f.submit 'Create Category', class: 'btn btn-default'%>
+      <h3>Dress</h3>
+      <%= text_field_tag :name2, "", class: 'form-control', placeholder: "Enter Name"  %>
+      <br>
+      <br>
+      <%= text_field_tag :quote2, "", class: 'form-control', placeholder: "Enter Name"  %>
+      <br>
+      <%= label_tag :image2,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= file_field_tag :image2 %>
+      </div>
+      <h3>Friend</h3>
+      <%= text_field_tag :name3, "", class: 'form-control', placeholder: "Enter Name"  %>
+      <br>
+      <br>
+      <%= text_field_tag :quote3, "", class: 'form-control', placeholder: "Enter Name"  %>
+      <br>
+      <%= label_tag :image3,'Upload An Image'%>
+      <br>
+      <div id="filefield">
+        <%= file_field_tag :image3 %>
+      </div>
+      <%= submit_tag 'Submit', class: 'btn btn-default'%>
     <% end %>
     </div>
   </div>
+
 </div>

@@ -9,8 +9,22 @@ Rails.application.routes.draw do
   resources :categories do
     member do
       put "like", to: "categories#upvote"
+      put "upcount", to: "categories#upcount"
     end
   end
+
+  resources :dresses do
+    member do
+      put "upcount", to: "categories#upcount2"
+    end
+  end
+
+  resources :friends do
+    member do
+      put "upcount", to: "categories#upcount3"
+    end
+  end
+
 
   resources :users do
     resources :profiles

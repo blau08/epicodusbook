@@ -3,12 +3,9 @@
     <header class="jumbotron hero-spacer text-center">
       <h1>Categories</h1>
       <p>A fun way to find out what others think about you</p>
-      <!-- <% if current_user %>
-      <%= link_to "New Student", new_student_path, class: "btn btn-primary" %>
-      <% end %> -->
       <%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
     </header>
-    <h1>Categories</h1>
+    <h1>Most Funny</h1>
     <div class="row text-center">
       <% @categories.each do |category| %>
       <div class="col-md-3 col-sm-6 hero-feature">
@@ -17,13 +14,51 @@
           <div class="caption">
             <%= link_to category.name, category_path(category) %>
             <p><%= category.quote %></p>
-            <p><%= link_to "Upvote", like_category_path(category), method: "put" %></p>
-            <p><%= category.get_upvotes.size %></p>
+            <p><%= link_to "Upvote", upcount_category_path(category), method: "put" %></p>
+            <p><%= category.count %></p>
           </div>
         </div>
       </div>
       <% end %>
     </div>
+    <hr>
+
+    <h1>Best Dressed</h1>
+    <div class="row text-center">
+      <% @dresses.each do |dress| %>
+      <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="thumbnail">
+          <%= image_tag dress.image.url(:large) %>
+          <div class="caption">
+            <%= link_to dress.name, category_path(dress) %>
+            <p><%= dress.quote %></p>
+            <p><%= link_to "Upvote", upcount_dress_path(dress), method: "put" %></p>
+            <p><%= dress.count %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <hr>
+
+    <h1>Friendliest Person</h1>
+    <div class="row text-center">
+      <% @friends.each do |friend| %>
+      <div class="col-md-3 col-sm-6 hero-feature">
+        <div class="thumbnail">
+          <%= image_tag friend.image.url(:large) %>
+          <div class="caption">
+            <%= link_to friend.name, category_path(friend) %>
+            <p><%= friend.quote %></p>
+            <p><%= link_to "Upvote", upcount_friend_path(friend), method: "put" %></p>
+            <p><%= friend.count %></p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
     <hr>
   </div>
 </div>

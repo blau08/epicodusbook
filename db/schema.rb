@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105235359) do
+ActiveRecord::Schema.define(version: 20151109205821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20151105235359) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "count"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -58,6 +59,30 @@ ActiveRecord::Schema.define(version: 20151105235359) do
     t.string   "edit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dresses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "quote"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.string   "name"
+    t.string   "quote"
+    t.integer  "count"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "profiles", force: :cascade do |t|
