@@ -20,6 +20,8 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @from = @student
+    @comment = Comment.new
     @comments = @student.comments
   end
 
