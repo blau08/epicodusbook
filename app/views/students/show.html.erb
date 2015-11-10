@@ -9,47 +9,40 @@
       <%= link_to "New Student", new_student_path, class: "btn btn-primary" %>
       <% end %>
       <!-- <%= link_to "New Category", new_category_path, class: "btn btn-primary" %> -->
-
     </header>
   </div>
   <div class="row">
     <div class="col-md-6">
       <div class="well">
-
-      <%= image_tag @student.image.url(:medium) %>
-      <br>
-      <br>
-      <%= link_to "", @student.facebook, class: "icon-social-facebook" %>
-      <%= link_to "", @student.linkedin, class: "icon-social-linkedin" %>
-      <%= link_to "", @student.github, class: "icon-social-github" %>
+        <%= image_tag @student.image.url(:medium) %>
+        <br>
+        <br>
+        <%= link_to "", @student.facebook, class: "icon-social-facebook" %>
+        <%= link_to "", @student.linkedin, class: "icon-social-linkedin" %>
+        <%= link_to "", @student.github, class: "icon-social-github" %>
       </div>
     </div>
     <div class="col-md-6">
       <div class="well">
-      <p>
-        <%= render '/comments/form' %>
-      </p>
-      <p><%= link_to "Edit", edit_student_path(@student) %></p>
-      <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
-      <p><%= link_to "Return to students", students_path %></p>
-      </div>
-
+        <p>
+          <%= render '/comments/form' %>
+        </p>
+        <p><%= link_to "Edit", edit_student_path(@student) %></p>
+        <p><%= link_to "Delete", student_path(@student), :method => 'delete' %></p>
+        <p><%= link_to "Return to students", students_path %></p>
       </div>
     </div>
   </div>
+</div>
 
 <div class="container text-center">
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
       <div id="show-comments">
         <div class="well">
-
-        <%= render '/comments/comments' %>
+          <%= render '/comments/comments' %>
         </div>
       </div>
     </div>
-
-</div>
+  </div>
 </div>

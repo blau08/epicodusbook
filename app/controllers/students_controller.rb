@@ -3,9 +3,18 @@ class StudentsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    if params[:search]
+      @students_search = Student.search(params[:search])
+    end
+
     @students = Student.all
     @categories = Category.all
     @profiles = Profile.all
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
 
     if user_signed_in?
       if current_user.profile == nil
@@ -18,7 +27,10 @@ class StudentsController < ApplicationController
     end
   end
 
+
+
   def show
+    @students = Student.all
     @student = Student.find(params[:id])
     @from = @student
     @comment = Comment.new

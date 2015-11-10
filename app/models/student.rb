@@ -6,4 +6,9 @@ class Student < ActiveRecord::Base
   validates :name, :presence => true
   validates :quote, :presence => true
   validates :image, :presence => true
+
+  def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("name like ?", "%#{query}%")
+  end
 end
