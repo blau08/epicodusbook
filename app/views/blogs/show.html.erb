@@ -10,7 +10,7 @@
       <br>
       by <%= @blog.name%>
       <br>
-      <%= @blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%Y-%m-%d %H:%M %P"  %>
+      <%= @blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y %l:%M %P"  %>
       <hr>
       <%= @blog.blog%>
 
