@@ -23,6 +23,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
     </div>
     <br>
+    <%= f.label :image,'Upload An Image'%>
+    <br>
+    <div id="filefield">
+      <%= f.file_field :image %>
+    </div>
     <div class="actions">
       <%= f.submit "Create Student", class: 'form-control', placeholder: 'Name' %>
     </div>

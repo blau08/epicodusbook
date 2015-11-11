@@ -1,15 +1,14 @@
-<div class="col-md-5">
+<div class="col-md-6">
 
   <% @students_search.each do |student| %>
-    <table>
-      <tr>
-        <td class="stat-name">
-          <%= student.name %>
-        </td>
-        <td class="stat-calories">
-          <%= student.quote %>
-        </td>
-      </tr>
-    </table>
+    <li><%= link_to student.name, student %> - <%= student.quote %></li>
+  <% end %>
+  <br>
+  <% @categories_search.each do |category| %>
+    <li><%= link_to category.name, category %> - <%= category.quote %></li>
+  <% end %>
+  <br>
+  <% @comments_search.each do |comment| %>
+    <li><%= comment.comment %> </li>
   <% end %>
 </div>

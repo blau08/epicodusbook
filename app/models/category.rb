@@ -11,4 +11,9 @@ class Category < ActiveRecord::Base
     end
     self.count += 1
   end
+
+  def self.search(query)
+    # where(:title, query) -> This would return an exact match of the query
+    where("name like ?", "%#{query}%")
+  end
 end

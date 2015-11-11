@@ -5,6 +5,8 @@ class StudentsController < ApplicationController
   def index
     if params[:search]
       @students_search = Student.search(params[:search])
+      @categories_search = Category.search(params[:search])
+      @comments_search = Comment.search(params[:search])
     end
 
     @students = Student.all
