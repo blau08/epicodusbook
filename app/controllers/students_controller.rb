@@ -11,22 +11,21 @@ class StudentsController < ApplicationController
 
     @students = Student.all
     @categories = Category.all
-    @profiles = Profile.all
 
     respond_to do |format|
       format.html
       format.js
     end
 
-    if user_signed_in?
-      if current_user.profile == nil
-        @profile = Profile.new
-      else
-        @profile = current_user.profile
-      end
-    else
-      @profile = nil
-    end
+    # if user_signed_in?
+    #   if current_user.profile == nil
+    #     @profile = Profile.new
+    #   else
+    #     @profile = current_user.profile
+    #   end
+    # else
+    #   @profile = nil
+    # end
   end
 
 
