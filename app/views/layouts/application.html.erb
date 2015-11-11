@@ -43,8 +43,10 @@
         <li><%= link_to 'Categories', categories_path, :class => 'navbar-link' %></li>
         <li><%= link_to 'Blogs', blogs_path, :class => 'navbar-link' %></li>
         <li><%= link_to 'Projects', projects_path, :class => 'navbar-link' %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, data: {method: "delete"}, :class => 'navbar-link'  %>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+
         <% else %>
+
         <li><%= link_to 'Home', students_path, :class => 'navbar-link' %><li>
         <li><%= link_to 'Categories', categories_path, :class => 'navbar-link' %><li>
         <li><%= link_to 'Blogs', blogs_path, :class => 'navbar-link' %><li>
