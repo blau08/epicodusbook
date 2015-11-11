@@ -25,15 +25,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-  resources :users do
-    resources :profiles
-  end
-
-  resources :profiles do
-    resources :comments
-  end
-
   resources :students do
     member do
       put "like", to: "students#upvote"

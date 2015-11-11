@@ -34,8 +34,10 @@
           <% if current_user.image.present? %>
             <li><%= image_tag"#{current_user.image.url(:thumb)}", class: "img-rounded", id: "user-pic" %></li>
           <% end %>
-          <li><%= link_to edit_user_registration_path do %>
-          Logged in as <strong><%= current_user.email %></strong>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              Logged in as <strong><%= current_user.email %></strong>
+            <% end %>
         </li>
         <li><%= link_to 'Home', students_path, :class => 'navbar-link' %></li>
         <li><%= link_to 'Categories', categories_path, :class => 'navbar-link' %></li>
@@ -50,7 +52,6 @@
         <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %><li>
         <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
         <% end %>
-
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <%= form_tag(students_path, remote: true, :method => "get", class: "navbar-form navbar-left", id: "search-form") do %>
@@ -63,9 +64,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
   <%= yield %>
-
-
 </body>
 </html>
