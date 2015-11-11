@@ -10,6 +10,11 @@
 
     </header>
   </div>
+  <div id="search-results">
+    <% if @students_search %>
+      <%= render 'search' %>
+    <% end %>
+  </div>
   <h1>Students 2015</h1>
   <div class="row text-center">
     <% @students.each do |student| %>
@@ -42,10 +47,4 @@
 
         <% end %>
   </div> -->
-</div>
-
-<div id="search-results">
-  <% if @students_search %>
-    <%= render 'search' %>
-  <% end %>
 </div>
