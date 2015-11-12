@@ -125,4 +125,10 @@ a.thumbnail.active {
    .navbar-collapse.collapse.in {  /* NEW */
         display: block!important;
     }
-}  
+}
+#search {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+  float: left;
+}
