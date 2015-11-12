@@ -56,12 +56,14 @@
         <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <%= form_tag(students_path, remote: true, :method => "get", class: "navbar-form navbar-left", id: "search-form") do %>
+        <li>
         <div class="form-group">
+        <%= form_tag(students_path, remote: true, :method => "get", class: "navbar-form navbar-left", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search" %>
-        </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
         <% end %>
+        </div>
+      </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
