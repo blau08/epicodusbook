@@ -9,6 +9,6 @@ class Student < ActiveRecord::Base
 
   def self.search(query)
     # where(:title, query) -> This would return an exact match of the query
-    where("name like ?", "%#{query}%")
+    where("lower(name) like ?", "%#{query}%")
   end
 end
