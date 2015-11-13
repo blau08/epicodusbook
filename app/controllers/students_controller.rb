@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
       @comments_search = Comment.search(params[:search])
     end
 
-    @students = Student.all
+    @students = Student.all.order(:name)
     @categories = Category.all
 
     respond_to do |format|
