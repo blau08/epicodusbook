@@ -5,9 +5,9 @@ class CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Category.all
-    @dresses = Dress.all
-    @friends = Friend.all
+    @categories = Category.all.order('count desc')
+    @dresses = Dress.all.order('count desc')
+    @friends = Friend.all.order('count desc')
   end
 
   def create
