@@ -8,14 +8,14 @@
   </div>
     <h1>Most Funny</h1>
     <div class="row text-center">
-      <% @categories.each_with_index do |category, index| %>
+      <% @categories.each do |category| %>
       <div class="col-md-3 col-sm-6 hero-feature">
         <div class="thumbnail">
           <%= image_tag category.image.url(:large) %>
           <div class="caption">
             <%= category.name %> - <%= category.quote %></p>
             <%= link_to "Upvote", upcount_category_path(category), method: "put", remote: true %>
-            <div id="total-votes-<%=vote.id%>">
+            <div id="total-votes-<%= category.id %>">
               <%= category.count %>
             </div>
           </div>
