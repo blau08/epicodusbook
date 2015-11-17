@@ -47,14 +47,20 @@ class CategoriesController < ApplicationController
     @dress = Dress.find(params[:id])
     @dress.upcount
     @dress.save
-    redirect_to categories_path
+    respond_to do |format|
+      format.html {redirect_to categories_path(@dress)}
+      format.js
+    end
   end
 
   def upcount3
     @friend = Friend.find(params[:id])
     @friend.upcount
     @friend.save
-    redirect_to categories_path
+    respond_to do |format|
+      format.html {redirect_to categories_path(@friend)}
+      format.js
+    end
   end
 
   # private

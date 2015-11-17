@@ -34,7 +34,10 @@
           <div class="caption">
             <%= dress.name %> - <%= dress.quote %>
             <br>
-            <%= link_to "Upvote", upcount_dress_path(dress), method: "put" %> <%= dress.count %>
+            <%= link_to "Upvote", upcount_dress_path(dress), method: "put", remote: true %>
+            <div id="total-dress-<%= dress.id %>">
+              <%= dress.count %>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +46,7 @@
 
     <hr>
 
-    <h1>Friendliest Person</h1>
+    <h1>Friendliest</h1>
     <div class="row text-center">
       <% @friends.each do |friend| %>
       <div class="col-md-3 col-sm-6 hero-feature">
@@ -52,7 +55,10 @@
           <div class="caption">
             <%= friend.name %> - <%= friend.quote %>
             <br>
-            <%= link_to "Upvote", upcount_friend_path(friend), method: "put" %> <%= friend.count %>
+            <%= link_to "Upvote", upcount_friend_path(friend), method: "put", remote: true %>
+            <div id="total-friend-<%= friend.id %>">
+              <%= friend.count %>
+            </div>
           </div>
         </div>
       </div>
