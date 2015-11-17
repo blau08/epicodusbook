@@ -6,6 +6,7 @@
       <%= link_to "New Blog", new_blog_path, class: "btn btn-primary" %>
     </header>
 
+  </div>
     <h1>Blogs 2015</h1>
     <div class="row text-center">
       <% @blogs.each do |blog| %>
@@ -13,10 +14,7 @@
         <div class="thumbnail">
           <%= image_tag blog.image.url(:large) %>
           <div class="caption">
-            <%= blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y"  %>
-            <br>
-            <br>
-            <%= link_to blog.title, blog_path(blog) %>
+            <%= link_to (blog.created_at.in_time_zone("Pacific Time (US & Canada)").strftime "%B %d, %Y"), blog_path(blog)  %>
             <p><%= blog.name %></p>
           </div>
         </div>
@@ -24,5 +22,5 @@
       <% end %>
     </div>
 
-  </div>
+  <hr>
 </div>

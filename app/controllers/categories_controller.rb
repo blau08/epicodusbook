@@ -37,7 +37,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.upcount
     @category.save
-    redirect_to categories_path
+    respond_to do |format|
+      format.html {redirect_to categories_path(@category)}
+      format.js
+    end
   end
 
   def upcount2

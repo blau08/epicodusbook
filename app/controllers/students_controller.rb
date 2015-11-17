@@ -16,16 +16,6 @@ class StudentsController < ApplicationController
       format.html
       format.js
     end
-
-    # if user_signed_in?
-    #   if current_user.profile == nil
-    #     @profile = Profile.new
-    #   else
-    #     @profile = current_user.profile
-    #   end
-    # else
-    #   @profile = nil
-    # end
   end
 
 
