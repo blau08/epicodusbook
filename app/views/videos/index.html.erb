@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <header class="jumbotron hero-spacer text-center">
+      <h1>Videos</h1>
+      <p>A look back at our journey together.</p>
+      <% if current_user %>
+      <%= link_to "New Student", new_student_path, class: "btn btn-primary" %>
+      <% end %>
+    </header>
+  </div>
+  <div class="row text-center">
+    <!-- 16:9 aspect ratio -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2ZkMsbcaKZQ"></iframe>
+    </div>
+    <p>
+      Epicodus Moves
+    </p>
+  </div>
+</div>
