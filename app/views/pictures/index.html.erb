@@ -11,6 +11,7 @@
     <% @pictures.each do |picture| %>
     <div class='test'>
         <%= image_tag picture.image.url(:medium) %>
+        <%= picture.title %>
     </div>
     <br>
     <% end %>
