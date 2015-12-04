@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <header class="jumbotron hero-spacer text-center">
+      <h1>Pictures</h1>
+      <p>A look back at our journey together.</p>
+      <%= link_to "New Picture", new_picture_path, class: "btn btn-primary" %>
+    </header>
+  </div>
+  <h1>Pictures 2015</h1>
+  <div class="row text-center">
+    <% @pictures.each do |picture| %>
+    <div class='test'>
+        <%= image_tag picture.image.url(:medium) %>
+    </div>
+    <br>
+    <% end %>
+  </div>
+
+</div>
