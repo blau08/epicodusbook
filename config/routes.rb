@@ -39,6 +39,8 @@ Rails.application.routes.draw do
 
   resources :pictures
 
+  resources :updates
+
   resources :videos
 
 end
