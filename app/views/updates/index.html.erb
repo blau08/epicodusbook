@@ -4,16 +4,13 @@
       <h1>EpicodusBook</h1>
       <p>A look back at our journey together.</p>
       <!-- <%= link_to "New Category", new_category_path, class: "btn btn-primary" %> -->
-      <% if current_user %>
-      <%= link_to "New Update", new_update_path, class: "btn btn-primary" %>
-      <% end %>
     </header>
   </div>
   <div class="row text-center">
     <table class="table">
       <thead>
         <tr>
-          <th class="text-center"><%= sortable "id", "#" %></th>
+          <th class="text-center"><%= sortable "id ", "#" %></th>
           <th class="text-center"><%= sortable "lastname", "Last Name" %></th>
           <th class="text-center"><%= sortable "firstname", "First Name" %></th>
           <th class="text-center"><%= sortable "age", "Age" %></th>
@@ -24,22 +21,20 @@
         </tr>
       </thead>
       <tbody>
-    <% @updates.each_with_index do |update, i| %>
-      <tr>
-        <td><%= (i+1) %></td>
-        <td><%= update.lastname %></td>
-        <td><%= update.firstname %></td>
-        <td><%= update.age %></td>
-        <td><%= update.gender %></td>
-        <td><%= update.cohort %></td>
-        <td><%= update.internship %></td>
-        <td><%= update.company %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  </table>
+        <% @students.each_with_index do |student, i| %>
+          <tr>
+            <td><%= (i+1) %></td>
+            <td><%= student.lastname %></td>
+            <td><%= student.firstname %></td>
+            <td><%= student.age %></td>
+            <td><%= student.gender %></td>
+            <td><%= student.cohort %></td>
+            <td><%= student.internship %></td>
+            <td><%= student.company %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-
   <hr>
-
 </div>

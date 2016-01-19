@@ -6,6 +6,10 @@
     <%= form_for @student do |f| %>
       <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
       <br>
+      <%= f.text_field :lastname, class: 'form-control', placeholder: 'Last Name' %>
+      <br>
+      <%= f.text_field :firstname, class: 'form-control', placeholder: 'First Name' %>
+      <br>
       <%= f.text_field :quote, class: 'form-control', placeholder: 'Enter Your Quote' %>
       <br>
       <%= f.text_field :facebook, class: 'form-control', placeholder: 'Facebook URL' %>
@@ -15,6 +19,16 @@
       <%= f.text_field :github, class: 'form-control', placeholder: 'Github URL' %>
       <br>
       <%= f.text_field :other, class: 'form-control', placeholder: 'Other URL' %>
+      <br>
+      <%= f.text_field :age, class: 'form-control', placeholder: 'Age' %>
+      <br>
+      <%= f.text_field :gender, class: 'form-control', placeholder: 'Gender' %>
+      <br>
+      <%= f.text_field :cohort, class: 'form-control', placeholder: 'Cohort' %>
+      <br>
+      <%= f.text_field :internship, class: 'form-control', placeholder: 'Internship' %>
+      <br>
+      <%= f.text_field :company, class: 'form-control', placeholder: 'Company' %>
       <br>
       <%= f.label :image,'Upload An Image'%>
       <br>
