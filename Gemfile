@@ -13,6 +13,7 @@ gem 'devise'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '< 2.0'
 gem 'acts_as_votable', '~> 0.10.0'
+gem "chartkick"
 
 group :development do
   gem 'byebug'

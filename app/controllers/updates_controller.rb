@@ -2,6 +2,7 @@ class UpdatesController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     @students = Student.all.order(sort_column + " " + sort_direction)
+    @students_bar = Student.all
   end
 
 
