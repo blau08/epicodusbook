@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'peron/index'
-
-  get 'peron/create'
-
-  get 'peron/new'
-
-  get 'peron/show'
-
   devise_for :users do
     delete 'logout' => 'sessions#destroy', :as => :destroy_user_session
   end
