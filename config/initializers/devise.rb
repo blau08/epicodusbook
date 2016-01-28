@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '0ea0ffd8c8c76628e6a717835a394d26baecee9984bf6d05da32ab00cc3a26d03b6f133f1d47117617c81796adc9398ec6c99254faa9c4af18c14047cd89fd15'
+  # config.secret_key = '39d5b6222195b0388da3adce1b8ba73651d95258e618851a46b74da8afa94bc738bbd9405858e05308b92efabf4fe3b433c6b53b9424dbb0ee392f76e20d3fa1'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '0e3f35871167b6dd35800076abdb2bf449eeb2172c0f68502469e4752b4f0f1fc96a612cc08ec7ef41ca7a44608edbf0fcf7d61d17bc47128a0236756c34f32b'
+  # config.pepper = 'd15e71f06b20ac1340a6c41790b2bfd012bbb36c3f9f1f12f7df6a15c5dd28b421b10c98032fba95c7419fa780cb40eae1300dc2b8add546f97dedda5ab8c6f9'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -153,9 +153,6 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   # config.timeout_in = 30.minutes
-
-  # If true, expires auth token on session timeout.
-  # config.expire_auth_token_on_timeout = false
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -211,7 +208,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -233,7 +230,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
