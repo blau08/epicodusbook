@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     delete 'logout' => 'sessions#destroy', :as => :destroy_user_session
   end
   root 'students#index'
+  
+  get "api", to: 'students#api'
   resources :students do
     resources :comments
   end

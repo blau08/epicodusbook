@@ -2,6 +2,11 @@ class StudentsController < ApplicationController
 
   before_action :authenticate_user!, only: [:new, :create]
 
+  def api
+    @students = Student.all
+    render json: @students
+  end
+
   def index
     if params[:search]
       @students_search = Student.search(params[:search])
